@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAY-YOO-MFS-HOME</title>
+  <!-- Daisy UI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <main class="flex justify-center">
+    <div class="mockup-phone">
+      <div class="camera"></div>
+      <div class="display">
+        <div class="artboard artboard-demo phone-2">
+
+
+          <!-- account balance -->
+          <div class="stats shadow">
+            <div class="stat">
+              <div class="stat-title">Account Balance</div>
+              <div id="balance-amount" class="stat-value">89400</div>
+            </div>
+          </div>
+
+          <!-- divider -->
+          <div class="divider"></div>
+
+          <!-- features start-->
+          <div class="flex flex-row justify-center flex-wrap space-x-3 gap-3">
+            <button id="adding-btn" class="btn btn-lg bg-orange-600">Add Money</button>
+            <button id="sending-btn" class="btn btn-lg bg-purple-600">Send Money</button>
+            <button id="transaction-btn" class="btn btn-lg bg-rose-600">Transaction History</button>
+          </div>
+          <!-- divider -->
+          <div class="divider"></div>
+          <!-- add money start -->
+          <div id="add-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Add Amount</span>
+                </label>
+                <input id="enter-money-amount" type="text" placeholder="Enter Amount" autocomplete="off"
+                  class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Login PIN</span>
+                </label>
+                <input id="pin-number" type="password" placeholder="Enter PIN" autocomplete="off"
+                  class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn-add-money" class="btn btn-primary bg-orange-600">Add Money</button>
+              </div>
+            </form>
+          </div>
+          <!-- add money end-->
+
+          
+          <!-- send money start -->
+          <div id="cash-out-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Cash Out Amount</span>
+                </label>
+                <input id="enter-cash-out-amount" type="text" placeholder="Enter Amount" autocomplete="off"
+                  class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Login PIN</span>
+                </label>
+                <input id="cash-out-pin-number" type="password" placeholder="Enter PIN" autocomplete="off"
+                  class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn-cash-out-money" class="btn btn-primary bg-purple-600">Send Money</button>
+              </div>
+            </form>
+          </div>
+          <!-- send money end -->
+
+          <!-- transaction Start -->
+          <div id="transaction-history" class="hidden">
+              <h1 class="text-center">Transaction History</h1>
+              <div id="transactions-container">
+
+              </div>
+          </div>
+          <!-- transaction end -->
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- Js Script -->
+  <script src="js/utilities.js"></script>
+  <script src="js/cashOut.js"></script>
+  <script src="js/addMoney.js"></script>
+  <script src="js/transaction.js"></script>
+  <script src="js/uiButtonInterface.js"></script>
+</body>
+
+</html>
